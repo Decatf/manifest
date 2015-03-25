@@ -1,0 +1,1 @@
+manifests for building Android
