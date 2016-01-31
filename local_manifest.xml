@@ -9,7 +9,7 @@
     <!--  -->
     <!-- Devices -->
     <!--  -->
-    <project path="kernel/samsung/p4" name="    " remote="home" revision="aosp-mm-dev" />
+    <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="aosp-mm-dev" />
     <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="aosp-6.0" />
     <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="home" revision="aosp-marshmallow" />
     <project path="device/samsung/p4" name="android_device_samsung_p4" remote="home" revision="aosp-marshmallow" />
