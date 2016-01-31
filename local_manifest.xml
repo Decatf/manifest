@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote fetch="git://github.com/" name="github" />
+    <remote fetch="file:////home/username/" name="home" />
+
+    <remove-project name="platform/build" />
+    <project path="build" name="android_build" remote="home" revision="aosp-6.0-test" />
+
+    <!--  -->
+    <!-- Devices -->
+    <!--  -->
+    <project path="kernel/samsung/p4" name="    " remote="home" revision="aosp-mm-dev" />
+    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="aosp-6.0" />
+    <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="home" revision="aosp-marshmallow" />
+    <project path="device/samsung/p4" name="android_device_samsung_p4" remote="home" revision="aosp-marshmallow" />
+    <project path="device/samsung/p4tmo" name="android_device_samsung_p4tmo" remote="home" revision="aosp-marshmallow" />
+    <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="home" revision="aosp-6.0" />
+    <project path="vendor/samsung/p4" name="android_vendor_samsung_p4" remote="home" revision="aosp-6.0" />
+    <project path="vendor/decatf" name="android_vendor_decatf" remote="home" revision="aosp-6.0" />
+    <project path="hardware/android-audio-wrapper" name="android-audio-wrapper" remote="home" revision="android-6.0" />
+
+
+    <!--  -->
+    <!-- Android frameworks -->
+    <!--  -->
+    <remove-project name="platform/art"/>
+    <remove-project name="platform/bionic" />
+    <remove-project name="platform/frameworks/av" />
+    <remove-project name="platform/frameworks/base" />
+    <remove-project name="platform/frameworks/ex" />
+    <remove-project name="platform/frameworks/native" />
+    <!-- <remove-project name="platform/hardware/broadcom/wlan" /> -->
+    <remove-project name="platform/hardware/libhardware_legacy" />
+    <!-- <remove-project name="platform/hardware/ril" /> -->
+    <remove-project name="platform/system/core" />
+    <remove-project name="platform/system/extras" />
+    <remove-project name="platform/frameworks/opt/net/wifi"/>
+    <remove-project name="platform/frameworks/opt/telephony" />
+    <remove-project name="platform/external/sepolicy" />
+    <remove-project name="platform/external/f2fs-tools" />
+    <remove-project name="platform/external/toybox" />
+    <!-- <remove-project name="platform/external/e2fsprogs" /> -->
+
+
+    <project path="art" name="android_art" remote="home" revision="aosp-6.0" />
+    <project path="bionic" name="android_bionic" remote="home" revision="aosp-6.0" />
+    <!-- <project path="frameworks/av" name="android_frameworks_av" remote="home" revision="aosp-6.0-dev" /> -->
+    <project path="frameworks/av" name="android_frameworks_av" remote="home" revision="aosp-6.0" />
+    <project path="frameworks/base" name="platform_frameworks_base" remote="home" revision="aosp-6.0" />
+    <project path="frameworks/ex" name="ex" remote="home" revision="aosp-6.0" />
+    <project path="frameworks/native" name="native" remote="home" revision="aosp-6.0" />
+    <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="home" revision="aosp-6.0" />
+    <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="home" revision="aosp-6.0.1" />
+    <!-- <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" remote="home" revision="aosp-6.0" /> -->
+    <project path="hardware/libhardware_legacy" name="libhardware_legacy" remote="home" revision="aosp-6.0" />
+    <!-- <project path="hardware/ril" name="ril" remote="home" revision="aosp-6.0" /> -->
+    <project path="system/core" name="platform_system_core" remote="home" revision="aosp-6.0" />
+    <project path="system/extras" name="android_system_extras" remote="home" revision="aosp-6.0" />
+    <project path="external/sepolicy" name="android_external_sepolicy" remote="home" revision="aosp-6.0" />
+    <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" remote="github" revision="cm-13.0" />
+    <!-- <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-13.0" /> -->
+
+
+    <remove-project name="platform/hardware/invensense" />
+    <!-- <project path="hardware/invensense" name="CyanogenMod/android_hardware_invensense" remote="github" revision="cm-13.0"/> -->
+
+    <!--  -->
+    <!-- App fixes -->
+    <!--  -->
+    <remove-project name="platform/packages/apps/Camera2" />
+    <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="home" revision="aosp-6.0" />
+
+
+    <!--  -->
+    <!-- Extras -->
+    <!--  -->
+    <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="github" revision="cm-13.0" />
+    <project path="external/toybox" name="CyanogenMod/android_external_toybox" remote="github" revision="cm-13.0" />
+    <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" remote="github" revision="cm-13.0" />
+    <project path="external/libtruezip" name="CyanogenMod/android_external_libtruezip" remote="github" revision="cm-13.0" />
+    <project path="external/uicommon" name="CyanogenMod/android_external_cyanogen_UICommon" remote="github" revision="cm-13.0" />
+
+</manifest>
