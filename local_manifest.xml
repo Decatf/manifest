@@ -4,7 +4,7 @@
     <remote fetch="file:////home/username/" name="home" />
 
     <remove-project name="platform/build" />
-    <project path="build" name="android_build" remote="home" revision="aosp-6.0-test" />
+    <project path="build" name="android_build" remote="home" revision="aosp-6.0" />
 
     <!--  -->
     <!-- Devices -->
@@ -34,12 +34,13 @@
     <!-- <remove-project name="platform/hardware/ril" /> -->
     <remove-project name="platform/system/core" />
     <remove-project name="platform/system/extras" />
+    <remove-project name="platform/system/vold" />
     <remove-project name="platform/frameworks/opt/net/wifi"/>
     <remove-project name="platform/frameworks/opt/telephony" />
     <remove-project name="platform/external/sepolicy" />
     <remove-project name="platform/external/f2fs-tools" />
     <remove-project name="platform/external/toybox" />
-    <!-- <remove-project name="platform/external/e2fsprogs" /> -->
+    <remove-project name="platform/external/e2fsprogs" />
 
 
     <project path="art" name="android_art" remote="home" revision="aosp-6.0" />
@@ -56,9 +57,10 @@
     <!-- <project path="hardware/ril" name="ril" remote="home" revision="aosp-6.0" /> -->
     <project path="system/core" name="platform_system_core" remote="home" revision="aosp-6.0" />
     <project path="system/extras" name="android_system_extras" remote="home" revision="aosp-6.0" />
+    <project path="system/vold" name="android_system_vold" remote="home" revision="aosp-6.0" />
     <project path="external/sepolicy" name="android_external_sepolicy" remote="home" revision="aosp-6.0" />
     <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" remote="github" revision="cm-13.0" />
-    <!-- <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-13.0" /> -->
+    <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="home" revision="aosp-6.0" />
 
 
     <remove-project name="platform/hardware/invensense" />
