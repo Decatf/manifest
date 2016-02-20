@@ -82,4 +82,12 @@
     <project path="external/libtruezip" name="CyanogenMod/android_external_libtruezip" remote="github" revision="cm-13.0" />
     <project path="external/uicommon" name="CyanogenMod/android_external_cyanogen_UICommon" remote="github" revision="cm-13.0" />
 
+    <!--  -->
+    <!-- Multirom -->
+    <!--  -->
+    <remove-project name="platform/bootable/recovery" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="home" revision="multirom-6.0" />
+    <project path="system/extras/multirom" name="multirom" remote="home" revision="p4wifi" />
+    <project path="system/extras/libbootimg" name="Tasssadar/libbootimg" remote="github" revision="master" />
+
 </manifest>
