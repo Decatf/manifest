@@ -2,52 +2,55 @@
 <manifest>
 
     <remote fetch="git://github.com/" name="github" />
-    <remote fetch="file:////home/username/" name="home" />
+    <remote fetch="file:////home/r/" name="home" />
 
     <remove-project name="platform/bionic" />
     <remove-project name="platform/bootable/recovery" />
     <remove-project name="platform/build" />
-    <!-- <remove-project name="platform/external/e2fsprogs" /> -->
+    <remove-project name="platform/external/e2fsprogs" />
     <remove-project name="platform/external/f2fs-tools" />
     <remove-project name="platform/frameworks/native" />
     <remove-project name="platform/system/core" />
+    <remove-project name="platform/system/extras" />
 
     <project path="bionic" name="android_bionic" remote="home" revision="aosp-6.0" />
     <project path="bootable/recovery" name="android_bootable_recovery" remote="home" revision="omnirom-6.0" />
     <project path="build" name="android_build" remote="home" revision="omnirom-6.0-twrp" />
     <project path="system/core" name="platform_system_core" remote="home" revision="aosp-6.0" />
+    <project path="system/extras" name="android_system_extras" remote="home" revision="aosp-6.0" />
 
     <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="android-6.0-twrp" />
     <project path="device/samsung/p4" name="android_device_samsung_p4" remote="home" revision="android-6.0-twrp" />
     <project path="device/samsung/p4tmo" name="android_device_samsung_p4tmo" remote="home" revision="android-6.0-twrp" />
     <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="home" revision="android-6.0-twrp" />
+    <project path="device/samsung/p5" name="android_device_samsung_p5" remote="home" revision="android-6.0-twrp" />
+    <project path="device/samsung/p5wifi" name="android_device_samsung_p5wifi" remote="home" revision="android-6.0-twrp" />
 
     <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="home" revision="aosp-lp-hwc" />
     <!-- <project path="vendor/samsung/p4" name="android_vendor_samsung_p4" remote="home" revision="aosp-lollipop" /> -->
 
     <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="twrp-android-6.0" />
     <!-- <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="twrp-android-6.0-TRIM" /> -->
+    <!-- <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="twrp-android-6.0-bigpart" /> -->
 
     <project path="external/busybox" name="omnirom/android_external_busybox" remote="github" revision="android-6.0" />
-
-    <!-- <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-13.0" /> -->
-    <!-- <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="home" revision="cm-12.0-p4" /> -->
-
-    <!-- <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="home" revision="jaeguk" /> -->
-    <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="home" revision="aosp-6.0" />
-
+    <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="home" revision="aosp-6.0" />
+    <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="home" revision="jaeguk-twrp" />
+    <!-- <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="home" revision="aosp-6.0" /> -->
+    <!-- <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="home" revision="cm-13.0" /> -->
     <project path="frameworks/native" name="native" remote="home" revision="aosp-6.0" />
 
     <!-- Multirom -->
-<!--     <remove-project name="android_build" />
-    <remove-project name="android_bootable_recovery" />
-    <remove-project name="android_device_samsung_p4-common" />
+    <!-- <remove-project name="android_build" /> -->
+    <!-- <remove-project name="android_bootable_recovery" /> -->
+    <!-- <remove-project name="android_device_samsung_p4-common" /> -->
 
-    <project path="build" name="android_build" remote="home" revision="omnirom-6.0-multirom_twrp" />
-    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="android-6.0-twrp_multirom" />
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="home" revision="multirom-6.0" />
-    <project path="system/extras/multirom" name="Tasssadar/multirom" remote="github" revision="master" />
-    <project path="system/extras/libbootimg" name="Tasssadar/libbootimg" remote="github" revision="master" /> -->
+    <!-- <project path="build" name="android_build" remote="home" revision="omnirom-6.0-multirom_twrp" /> -->
+    <!-- <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="android-6.0-twrp_multirom" /> -->
+    <!-- <project path="bootable/recovery" name="android_bootable_recovery" remote="home" revision="multirom-6.0" /> -->
+    <!-- <project path="bootable/recovery" name="android_bootable_recovery" remote="home" revision="multirom-6.0-upstream_merge" /> -->
+    <!-- <project path="system/extras/multirom" name="multirom" remote="home" revision="p4wifi" /> -->
+    <project path="system/extras/libbootimg" name="Tasssadar/libbootimg" remote="github" revision="master" />
 
 </manifest>
 
