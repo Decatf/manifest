@@ -15,16 +15,16 @@
     <remove-project name="platform/system/extras" />
 
     <project path="bionic" name="platform_bionic" remote="decatf" revision="aosp-6.0" />
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="decatf" revision="omnirom-7.1" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="decatf" revision="omnirom-7.1-upstream_kernel" />
     <project path="build" name="platform_build" remote="decatf" revision="omnirom-6.0-twrp" />
     <project path="system/core" name="platform_system_core" remote="decatf" revision="aosp-6.0" />
     <project path="system/extras" name="android_system_extras" remote="decatf" revision="aosp-6.0" />
 
 
-    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="decatf" revision="android-6.0-twrp" />
+    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="decatf" revision="android-6.0-twrp-upstream_kernel" />
     <project path="device/samsung/p4" name="android_device_samsung_p4" remote="decatf" revision="android-6.0-twrp" />
     <project path="device/samsung/p4tmo" name="android_device_samsung_p4tmo" remote="decatf" revision="android-6.0-twrp" />
-    <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="decatf" revision="android-6.0-twrp" />
+    <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="decatf" revision="android-6.0-twrp-upstream_kernel" />
     <project path="kernel/samsung/p4" name="android_kernel_samsung_p4" remote="decatf" revision="twrp-android-6.0" />
 
     <!-- BIGPART -->
