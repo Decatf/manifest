@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote fetch="git://github.com/" name="github" />
+    <remote fetch="git://github.com/decatf/" name="decatf" />
+
+    <remove-project name="platform/build" />
+    <project path="build" name="android_build" remote="decatf" revision="aosp-8.0" />
+
+    <remove-project name="platform/build/soong" />
+    <project path="build/soong" name="android_build_soong" remote="decatf" revision="aosp-8.0" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+
+    <!--  -->
+    <!-- Devices -->
+    <!--  -->
+    <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="decatf" revision="aosp-o-dev" />
+
+    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="decatf" revision="aosp-8.0-dev" />
+    <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="decatf" revision="aosp-oreo" />
+
+    <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="decatf" revision="aosp-8.0-notion_ink_adam" />
+    <project path="vendor/decatf" name="android_vendor_decatf" remote="decatf" revision="aosp-8.0" />
+
+
+    <!--  -->
+    <!-- Android frameworks -->
+    <!--  -->
+    <remove-project name="platform/art"/>
+    <remove-project name="platform/bionic" />
+    <remove-project name="platform/frameworks/av" />
+    <remove-project name="platform/frameworks/base" />
+    <remove-project name="platform/frameworks/native" />
+    <remove-project name="platform/system/bt" />
+    <remove-project name="platform/system/core" />
+    <remove-project name="platform/system/sepolicy" />
+    <remove-project name="platform/external/chromium-webview" />
+
+    <project path="art" name="android_art" remote="decatf" revision="aosp-8.0" />
+    <project path="bionic" name="platform_bionic" remote="decatf" revision="aosp-8.0" />
+    <project path="frameworks/av" name="platform_frameworks_av" remote="decatf" revision="aosp-8.0" />
+    <project path="frameworks/base" name="platform_frameworks_base" remote="decatf" revision="aosp-8.0" />
+    <project path="frameworks/native" name="platform_frameworks_native" remote="decatf" revision="aosp-8.0" />
+    <project path="system/core" name="platform_system_core" remote="decatf" revision="aosp-8.0" />
+    <project path="system/bt" name="android_system_bt" remote="decatf" revision="aosp-8.0" />
+    <project path="system/sepolicy" name="android_system_sepolicy" remote="decatf" revision="aosp-8.0" />
+
+    <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"/>
+    <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="master"/>
+
+    <!--  -->
+    <!-- App fixes -->
+    <!--  -->
+    <remove-project name="platform/packages/apps/Settings" />
+
+    <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="decatf" revision="aosp-8.0" />
+
+    <!--  -->
+    <!-- App additions -->
+    <!--  -->
+    <project path="platform/packages/apps/Apollo" name="omnirom/android_packages_apps_Apollo" remote="github" revision="android-7.1" />
+
+    <!--  -->
+    <!-- App remove -->
+    <!--  -->
+    <remove-project name="platform/packages/apps/Browser2" />
+    <remove-project name="platform/packages/apps/Camera2" />
+    <remove-project name="platform/packages/apps/Music" />
+
+    <!--  -->
+    <!-- Extras -->
+    <!--  -->
+    <project path="external/busybox" name="harryyoud/android_external_busybox" remote="github" revision="lineage-15.0" />
+
+    <remove-project name="platform/bootable/recovery" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="decatf" revision="aosp-8.0-dev" />
+
+    <!--  -->
+    <!-- arm-tcg -->
+    <!--  -->
+    <project path="external/arm-tcg" name="tcg-arm" remote="decatf" revision="master" />
+    <project path="external/libjaunt" name="libjaunt" remote="decatf" revision="master" />
+
+</manifest>
