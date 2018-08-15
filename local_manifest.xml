@@ -4,7 +4,6 @@
             fetch="file:////home/r/" />
     <remote fetch="git://github.com/" name="github" />
     <remote fetch="git://github.com/decatf/" name="decatf" />
-    <remote fetch="https://gitlab.com/ryang2678" name="gitlab" />
 
     <remove-project name="platform/build" />
     <project path="build" name="android_build" remote="home" revision="aosp-8.1-dev" />
@@ -15,23 +14,14 @@
         <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
 
-    <!-- 
-     -->
+    <!--  -->
     <!-- Devices -->
     <!--  -->
-    <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="android-4.4-o-p4wifi-20171101" />
-
-    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="aosp-8.0-dev" />
+    <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="android-4.4-p4wifi" />
+    <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="aosp-8.1-dev" />
     <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="home" revision="aosp-oreo" />
-    <project path="device/samsung/p4" name="android_device_samsung_p4" remote="home" revision="aosp-o-preview-2" />
-    <project path="device/samsung/p4tmo" name="android_device_samsung_p4tmo" remote="decatf" revision="aosp-nougat" />
-    <project path="device/samsung/p5wifi" name="android_device_samsung_p5wifi" remote="decatf" revision="aosp-nougat-dev" />
-    <project path="device/samsung/p5" name="android_device_samsung_p5" remote="home" revision="aosp-nougat-p5-dev" />
-
-    <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="home" revision="aosp-8.0-notion_ink_adam" />
-    <project path="vendor/samsung/p4" name="android_vendor_samsung_p4" remote="home" revision="aosp-o-preview-2" />
-    <project path="vendor/decatf" name="android_vendor_decatf" remote="home" revision="aosp-8.0" />
-
+    <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="home" revision="aosp-8.1" />
+    <project path="vendor/decatf" name="android_vendor_decatf" remote="home" revision="aosp-8.1" />
 
     <!--  -->
     <!-- Android frameworks -->
@@ -44,31 +34,28 @@
     <remove-project name="platform/system/bt" />
     <remove-project name="platform/system/core" />
     <remove-project name="platform/system/sepolicy" />
-    <!-- <remove-project name="platform/frameworks/opt/net/wifi"/> -->
+    <remove-project name="platform/frameworks/opt/net/wifi"/>
     <remove-project name="platform/external/chromium-webview" />
 
-    <!-- <remove-project name="platform/hardware/interfaces" /> -->
+    <remove-project name="platform/hardware/interfaces" />
 
     <project path="art" name="android_art" remote="home" revision="aosp-8.1-dev" />
     <project path="bionic" name="android_bionic" remote="home" revision="aosp-8.1-dev" />
     <project path="frameworks/av" name="android_frameworks_av" remote="home" revision="aosp-8.1-dev" />
-    <project path="frameworks/base" name="platform_frameworks_base" remote="home" revision="aosp-8.1-dev" />
+    <project path="frameworks/base" name="platform_frameworks_base" remote="decatf" revision="aosp-8.1-dev" />
     <project path="frameworks/native" name="native" remote="home" revision="aosp-8.1-dev" />
-    <!-- <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="home" revision="aosp-o-preview-2" /> -->
+    <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="home" revision="aosp-8.1-dev" />
     <project path="system/core" name="platform_system_core" remote="home" revision="aosp-8.1-dev" />
     <project path="system/bt" name="android_system_bt" remote="home" revision="aosp-8.1-dev" />
     <project path="system/sepolicy" name="android_system_sepolicy" remote="home" revision="aosp-8.1-dev" />
 
-    <!-- <project path="hardware/interfaces" name="android_hardware_interfaces" remote="home" revision="aosp-8.0-shadow_gralloc" /> -->
+    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="home" revision="aosp-8.1" />
 
 
     <!--  -->
     <!-- App fixes -->
     <!--  -->
-    <!-- <remove-project name="platform/packages/apps/Launcher3" /> -->
     <remove-project name="platform/packages/apps/Settings" />
-
-    <!-- <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="home" revision="aosp-8.0-dev" /> -->
     <project path="packages/apps/Settings" name="Settings" remote="home" revision="aosp-8.1-dev" />
 
     <!--  -->
@@ -86,9 +73,6 @@
     <!--  -->
     <!-- Extras -->
     <!--  -->
-    <!-- <project path="external/busybox" name="omnirom/android_external_busybox" remote="github" revision="android-7.1" /> -->
-    <project path="external/busybox" name="harryyoud/android_external_busybox" remote="github" revision="lineage-15.0" />
-    <!-- <project path="external/busybox" name="android_external_busybox" remote="home" revision="aosp-8.0-dev" /> -->
 
     <remove-project name="platform/bootable/recovery" />
     <project path="bootable/recovery" name="android_bootable_recovery" remote="home" revision="aosp-8.1-dev" />
@@ -96,7 +80,7 @@
     <!--  -->
     <!-- arm-tcg -->
     <!--  -->
-    <project path="external/arm-tcg" name="arm-tcg" remote="home" revision="master" />
-    <project path="external/libjaunt" name="libjaunt" remote="home" revision="master" />
+    <project path="external/arm-tcg" name="arm-tcg" remote="home" revision="aosp-8.1" />
+    <project path="external/libjaunt" name="libjaunt" remote="home" revision="aosp-8.1" />
 
 </manifest>
