@@ -6,7 +6,9 @@
     <remote fetch="git://github.com/decatf/" name="decatf" />
 
     <remove-project name="platform/build" />
-    <project path="build" name="platform_build" remote="decatf" revision="aosp-7.1.2" />
+    <project path="build" name="platform_build" remote="decatf" revision="aosp-7.1.2">
+        <copyfile src="core/root.mk" dest="Makefile" />
+    </project>
 
     <!--  -->
     <!-- Devices -->
@@ -18,12 +20,11 @@
     <project path="device/samsung/p4" name="android_device_samsung_p4" remote="decatf" revision="aosp-nougat" />
     <project path="device/samsung/p4tmo" name="android_device_samsung_p4tmo" remote="decatf" revision="aosp-nougat" />
     <project path="device/samsung/p5wifi" name="android_device_samsung_p5wifi" remote="decatf" revision="aosp-nougat-dev" />
-    <project path="device/samsung/p5" name="android_device_samsung_p5" remote="decatf" revision="aosp-nougat-p5-dev" />
+    <project path="device/samsung/p5" name="android_device_samsung_p4" remote="decatf" revision="aosp-nougat-p5-dev" />
 
     <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="decatf" revision="aosp-7.1-dev" />
     <project path="vendor/samsung/p4" name="android_vendor_samsung_p4" remote="decatf" revision="aosp-7.1-dev" />
     <project path="vendor/decatf" name="android_vendor_decatf" remote="decatf" revision="aosp-7.1" />
-
 
     <!--  -->
     <!-- Android frameworks -->
@@ -40,7 +41,7 @@
     <remove-project name="platform/frameworks/opt/net/wifi"/>
     <remove-project name="platform/frameworks/opt/telephony" />
     <remove-project name="platform/external/e2fsprogs" />
-    <remove-project name="platform/external/chromium-webview" />
+    <remove-project name="platform/libcore" />
 
     <project path="art" name="android_art" remote="decatf" revision="aosp-7.1.2" />
     <project path="bionic" name="platform_bionic" remote="decatf" revision="aosp-7.1.2" />
@@ -54,6 +55,10 @@
     <project path="system/vold" name="android_system_vold" remote="decatf" revision="aosp-7.1.2" />
     <project path="system/sepolicy" name="android_system_sepolicy" remote="decatf" revision="aosp-7.1.2" />
     <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="decatf" revision="aosp-7.1.2" />
+    <project path="libcore" name="android_libcore" remote="decatf" revision="aosp-7.1.2" />
+
+    <!-- non-NEON webview is provided by android_vendor_decatf  -->
+    <remove-project name="platform/external/chromium-webview" />
 
     <!--  -->
     <!-- App fixes -->
@@ -103,7 +108,7 @@
     <!--  -->
     <!-- arm-tcg -->
     <!--  -->
-    <project path="external/arm-tcg" name="arm-tcg" remote="decatf" revision="master" />
+    <project path="external/arm-tcg" name="tcg-arm" remote="decatf" revision="master" />
     <project path="external/libjaunt" name="libjaunt" remote="decatf" revision="master" />
 
 
