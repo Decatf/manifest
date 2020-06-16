@@ -5,7 +5,7 @@
     <remote fetch="git://github.com/decatf/" name="home" />
 
     <remove-project name="platform/build" />
-    <project path="build" name="android_build" remote="home" revision="aosp-8.1-dev" />
+    <project path="build" name="platform_build" remote="home" revision="aosp-8.1-dev" />
 
     <remove-project name="platform/build/soong" />
     <project path="build/soong" name="android_build_soong" remote="home" revision="aosp-8.1-dev" >
@@ -16,11 +16,11 @@
     <!--  -->
     <!-- Devices -->
     <!--  -->
-    <project path="kernel/samsung/p4" name="decatf/android_kernel_samsung_p4" remote="home" revision="android-4.4-p4wifi" />
+    <project path="kernel/samsung/p4" name="linux" remote="home" revision="android-4.4-p4wifi" />
     <project path="device/samsung/p4-common" name="android_device_samsung_p4-common" remote="home" revision="aosp-8.1-dev" />
     <project path="device/samsung/p4wifi" name="android_device_samsung_p4wifi" remote="home" revision="aosp-oreo" />
     <project path="vendor/samsung/p4wifi" name="android_vendor_samsung_p4wifi" remote="home" revision="aosp-8.1" />
-    <project path="vendor/decatf" name="android_vendor_decatf" remote="home" revision="aosp-8.1" />
+    <project path="vendor/decatf" name="android_vendor_decatf" remote="home" revision="aosp-8.0" />  <!-- aosp-8.1 branch no longer there? -->
 
     <!--  -->
     <!-- Android frameworks -->
@@ -39,23 +39,25 @@
     <remove-project name="platform/hardware/interfaces" />
 
     <project path="art" name="android_art" remote="home" revision="aosp-8.1-dev" />
-    <project path="bionic" name="android_bionic" remote="home" revision="aosp-8.1-dev" />
-    <project path="frameworks/av" name="android_frameworks_av" remote="home" revision="aosp-8.1-dev" />
-    <project path="frameworks/base" name="platform_frameworks_base" remote="decatf" revision="aosp-8.1-dev" />
-    <project path="frameworks/native" name="native" remote="home" revision="aosp-8.1-dev" />
+    <project path="bionic" name="platform_bionic" remote="home" revision="aosp-8.1-dev" />
+    <project path="frameworks/av" name="platform_frameworks_av" remote="home" revision="aosp-8.1-dev" />
+    <project path="frameworks/base" name="platform_frameworks_base" remote="home" revision="aosp-8.1-dev" />
+    <project path="frameworks/native" name="platform_frameworks_native" remote="home" revision="aosp-8.1-dev" />
     <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="home" revision="aosp-8.1-dev" />
     <project path="system/core" name="platform_system_core" remote="home" revision="aosp-8.1-dev" />
     <project path="system/bt" name="android_system_bt" remote="home" revision="aosp-8.1-dev" />
     <project path="system/sepolicy" name="android_system_sepolicy" remote="home" revision="aosp-8.1-dev" />
 
+    <!-- This one is not online in Decatf's repo, seems like his local folder
+         Unsure if lack of this will break complication, or where to find Decatf's changes
     <project path="hardware/interfaces" name="android_hardware_interfaces" remote="home" revision="aosp-8.1" />
-
+    -->
 
     <!--  -->
     <!-- App fixes -->
     <!--  -->
     <remove-project name="platform/packages/apps/Settings" />
-    <project path="packages/apps/Settings" name="Settings" remote="home" revision="aosp-8.1-dev" />
+    <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="home" revision="aosp-8.1-dev" />
 
     <!--  -->
     <!-- App additions -->
@@ -79,7 +81,7 @@
     <!--  -->
     <!-- arm-tcg -->
     <!--  -->
-    <project path="external/arm-tcg" name="arm-tcg" remote="home" revision="aosp-8.1" />
+    <project path="external/arm-tcg" name="tcg-arm" remote="home" revision="aosp-8.1" />
     <project path="external/libjaunt" name="libjaunt" remote="home" revision="aosp-8.1" />
 
 </manifest>
