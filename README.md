@@ -1,6 +1,7 @@
 manifests for building Android 
 
 Instructions to download AOSP 8.1.0 repo with Decatf's repo:
+(this assumes a scenario when you do not have Decatf's repo synced separately to a local folder)
 
 1) cd 'wherever_android_repo_folder_is'
     cd repo
