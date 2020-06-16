@@ -14,3 +14,5 @@ To sync both repos:
 2) repo sync -j7 -c --no-tags    
 
 (repo sync: -jN, where N = number of your CPU cores minus 1, utilizes multithreading; --no-tags avoids syncing all tags; -c option for repo sync makes repo to fetch only the branch you really need instead of all branches of each git)
+
+It is important to review local_manifest.xml for inconsistencies - make sure that remote project names and revisions are what is needed and that they exist.
