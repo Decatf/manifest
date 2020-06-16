@@ -1,6 +1,6 @@
 manifests for building Android 
 
-Instructions to download **AOSP 8.1.0** repo with Decatf's repo: 
+Instructions to download **AOSP 8.1.0_r42** repo with Decatf's repo: 
 
 (this assumes a scenario when 
     a) you do not have Decatf's repo synced separately to a local folder, and 
