@@ -36,7 +36,9 @@
     <remove-project name="platform/frameworks/opt/net/wifi"/>
     <remove-project name="platform/external/chromium-webview" />
 
+    <!-- missing Decatf's repo android_hardware_interfaces so leaving this out
     <remove-project name="platform/hardware/interfaces" />
+    -->
 
     <project path="art" name="android_art" remote="home" revision="aosp-8.1-dev" />
     <project path="bionic" name="platform_bionic" remote="home" revision="aosp-8.1-dev" />
