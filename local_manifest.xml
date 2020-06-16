@@ -80,7 +80,7 @@
 
     <!--  -->
     <!-- arm-tcg -->
-    <!--  -->
+    <!--   -->
     <project path="external/arm-tcg" name="tcg-arm" remote="home" revision="aosp-8.1" />
     <project path="external/libjaunt" name="libjaunt" remote="home" revision="aosp-8.1" />
 
