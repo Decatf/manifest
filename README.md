@@ -1,29 +1,29 @@
 manifests for building Android 
 
-Instructions to download [AOSP 8.1.0] repo with Decatf's repo: 
+Instructions to download **AOSP 8.1.0** repo with Decatf's repo: 
 
 (this assumes a scenario when 
     a) you do not have Decatf's repo synced separately to a local folder, and 
     b) you have nothing locally, 
     c) and you just want to download and keep everything together in one repository folder)
     
-repo - Google's tool to enhance git functionality, installation instructions found at https://source.android.com/setup/build/downloading and require 4 steps:
-                             1) mkdir ~/bin
-                             2) PATH=~/bin:$PATH
+*repo* - Google's tool to enhance git functionality, installation instructions found at https://source.android.com/setup/build/downloading and require 4 steps:
+                             1) mkdir /home/yourusername/bin
+                             2) PATH=/home/yourusername/bin:$PATH
                              3) curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
                              4) chmod a+x ~/bin/repo
 
-repoandroid - any local folder where you want to set up the repository, i.e. with the path ~/repoandroid
+*repoandroid* - any local folder where you want to set up the repository, i.e. with the path ~/repoandroid
 
-1) cd repoandroid
-2) repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r42
+1) `cd repoandroid`
+2) `repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r42`
 3) copy manifest.xml to repoandroid/.repo (overwriting manifest.xml there)
 4) create a folder repoandroid/.repo/local_manifests/
 5) copy local_manifest.xml to repoandroid/.repo/local_manifests
 
 To sync both repos:
-1) cd repoandroid
-2) repo sync -j7 -c --no-tags    
+1) `cd repoandroid`
+2) `repo sync -j7 -c --no-tags`    
 
 (repo sync: -jN, where N = number of your CPU cores minus 1, utilizes multithreading; --no-tags avoids syncing all tags; -c option for repo sync makes repo to fetch only the branch you really need instead of all branches of each git)
 
